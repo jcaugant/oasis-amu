@@ -26,3 +26,6 @@ def evolution_depot(col, annee_d, annee_f) :
 
 
 st.write("Sélectionnez l'indicateur que vous souhaitez afficher")
+st.selectbox('Sélectionnez l\'indicateur que vous souhaitez afficher',
+    ('Choix','Evolution des dépôts de codes dans un portail ou une collection', 'Répartition des dépôts de codes par langage'))
+
