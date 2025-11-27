@@ -12,3 +12,6 @@ pages = {
         st.Page("code_lang.py", title="Répartition des dépôts par langage"),
     ],
 }
+
+pg = st.navigation(pages)
+pg.run()
