@@ -21,3 +21,6 @@ def evolution_depot(col, annee_d, annee_f) :
     df=df.set_index("Dates")
     st.line_chart(df[['Nombre de codes']])
     st.dataframe(df, width = 500)
+
+
+st.write("Sélectionnez l'indicateur que vous souhaitez afficher")
