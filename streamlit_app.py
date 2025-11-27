@@ -8,7 +8,7 @@ pages = {
         st.Page("list_authors.py", title="Auteurs d'une structure"),
     ],
     "Bonus AMU": [
-        st.Page("bonus_stat.py", title = "Pourcentage de dépôts dans HAL"),
+        st.Page("bonus_stats.py", title = "Pourcentage de dépôts dans HAL"),
     ],
     "Codes et Logiciels": [
         st.Page("code_stats.py", title="Evolution des dépôts"),
