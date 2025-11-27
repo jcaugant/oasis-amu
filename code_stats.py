@@ -1,3 +1,5 @@
+import streamlit as st
+
 def evolution_depot(col, annee_d, annee_f) :
     nb_code, date_hal = [], []
     annee_d, annee_f = int(annee_d), int(annee_f)
