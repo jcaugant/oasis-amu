@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from bs4 import BeautifulSoup as bs
 import requests as rq
+from datetime import datetime
 
 pages = {
     "Auteurs": [
