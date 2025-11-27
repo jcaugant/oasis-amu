@@ -21,20 +21,3 @@ def evolution_depot(col, annee_d, annee_f) :
     df=df.set_index("Dates")
     st.line_chart(df[['Nombre de codes']])
     st.dataframe(df, width = 500)
-
-analyse = st.selectbox(
-    'Sélectionnez l\'indicateur que vous souhaitez afficher',
-    ('Choix','Evolution des dépôts de codes dans un portail ou une collection', 'Répartition des dépôts de codes par langage'))
-
-if analyse == 'Choix' :
-    st.write('Sélectionnez dans la barre latérale quels indicateurs vous souhaitez afficher')
-
-if analyse == 'Evolution des dépôts de codes dans un portail ou une collection' :
-    portail = st.text_input("Entrez l'acronyme du portail ou de la collection à analyser", "")
-    year_s = st.selectbox(
-    'Sélectionnez une année de départ',
-    (2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024))
-    year_e = st.selectbox(
-    'Sélectionnez une année de fin',
-    (2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025))
-    evolution_depot(portail,year_s,year_e)
