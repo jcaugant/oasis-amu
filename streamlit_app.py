@@ -3,3 +3,12 @@ import pandas as pd
 from bs4 import BeautifulSoup as bs
 import requests as rq
 
+pages = {
+    "Auteurs": [
+        st.Page("list_authors.py", title="Auteurs d'une structure"),
+    ],
+    "Codes et Logiciels": [
+        st.Page("code_stats.py", title="Evolution des dépôts"),
+        st.Page("code_lang.py", title="Répartition des dépôts par langage"),
+    ],
+}
