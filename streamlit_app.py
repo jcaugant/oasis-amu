@@ -15,7 +15,7 @@ pages = {
         st.Page("col_stats.py", title="Evolution des dépôts"),
         st.Page("col_chart.py", title=" Répartition des dépôts par type"),
         st.Page("project_chart.py", title=" Répartition des projets ANR et ERC"),
-        st.Page("detect_false.py", title="Détection des doublons"),
+        st.Page("detect_false.py", title="Détection des doublons")
 }
 
 pg = st.navigation(pages)
