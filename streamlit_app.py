@@ -17,6 +17,10 @@ pages = {
         st.Page("project_chart.py", title=" Répartition des projets ANR et ERC"),
         st.Page("detect_false.py", title="Détection des doublons"),
         st.Page("detect_doi.py", title="Détection par liste de DOI"),
+    ],
+    "Structures": [
+        st.Page("hal_alex.py", title = "Comparaison structures HAL/OpenAlex"),
+        st.Page("struct_list.py", title = "Liste des identifiants d'une structure"),
     ]
 }
 
