@@ -29,9 +29,9 @@ def detect_doublon(col, annee_d, annee_f) :
 
 portail = st.text_input("Entrez l'acronyme du portail ou de la collection à analyser", "")
 year_s = st.selectbox(
-  'Sélectionnez l\'année de départ de votre sélection',
-  (2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024))
-  year_e = st.sidebar.selectbox(
-  'Sélectionnez l\'année d\'arrivée de votre sélection',
-  (2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025))
-  detect_doublon(portail,year_s,year_e)
+'Sélectionnez l\'année de départ de votre sélection',
+(2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024))
+year_e = st.sidebar.selectbox(
+'Sélectionnez l\'année d\'arrivée de votre sélection',
+(2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025))
+detect_doublon(portail,year_s,year_e)
