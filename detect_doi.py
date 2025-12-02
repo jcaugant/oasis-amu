@@ -25,12 +25,12 @@ if fichier is not None:
                 
 
   df_hal = pd.DataFrame(
-    {
-    "DOI": list_doi,
-    "Type de dépôts": list_result,
-    "Identifiant HAL" : list_hal,
-    }
-    )
-    st.dataframe(df_hal)
-  else :
-    st.write("Ajoutez un fichier au format .csv comprenant la liste de vos DOI dans une seule colonne appelée doi")
+  {
+  "DOI": list_doi,
+  "Type de dépôts": list_result,
+  "Identifiant HAL" : list_hal,
+  }
+  )
+  st.dataframe(df_hal)
+else :
+  st.write("Ajoutez un fichier au format .csv comprenant la liste de vos DOI dans une seule colonne appelée doi")
