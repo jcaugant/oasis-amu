@@ -5,7 +5,7 @@ from datetime import datetime
 portail = st.text_input("Entrez le code de votre structure", "")
 if portail == "" :
   st.markdown(''' Veuillez renseigner le code de votre collection ou portail comme indiqué dans [Aurehal](https://aurehal.archives-ouvertes.fr/structure/index)''')
-link = st.sidebar.checkbox('Ne pas compter les notices avec lien Open-Access')
+link = st.checkbox('Ne pas compter les notices avec lien Open-Access')
 liste_hal = []
 url_total = f"https://api.archives-ouvertes.fr/search/?q=*%3A*&fq=publicationDateY_i:2025&fq=structId_i:{portail}&wt=json"
 url_file = f"https://api.archives-ouvertes.fr/search/?q=*%3A*&fq=publicationDateY_i:2025&fq=structId_i:{portail}&wt=json&fq=submitType_s:file"
