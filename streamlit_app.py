@@ -23,7 +23,7 @@ pages = {
         st.Page("struct_list.py", title = "Liste des identifiants d'une structure"),
     ],
     "Script partagés": [
-        st.Page("script_gg.py", title = "Script Gillaume Godet"),
+        st.Page("script_gg.py", title = "Script Guillaume Godet"),
     ]
 }
 
