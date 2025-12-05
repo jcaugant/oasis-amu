@@ -55,7 +55,7 @@ def evolution_depot(col, annee_d, annee_f) :
     with tab_typo :
         st.dataframe(df_typo, width = 500)
 
-portail = st.text_input("Entrez l'acronyme du portail ou de la collection à analyser pour faire des tests", "")
+portail = st.text_input("Entrez l'acronyme du portail ou de la collection à analyser", "")
 year_s = st.selectbox(
 'Sélectionnez une année de départ',
 (2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025))
