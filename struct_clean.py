@@ -24,9 +24,9 @@ def struct_clean(col):
   col1, col2, col3 = st.columns(3)
   with col1:
     st.dataframe(df_valid)
-with col2:
+  with col2:
     st.dataframe(df_old)
-with col3:
+  with col3:
     st.dataframe(df_unknown)
   
 portail = st.text_input("Entrez le numéro d'identifiant du portail ou de la collection à analyser", "")
