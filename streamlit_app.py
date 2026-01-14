@@ -21,6 +21,7 @@ pages = {
     "Structures": [
         st.Page("hal_alex.py", title = "Comparaison structures HAL/OpenAlex"),
         st.Page("struct_list.py", title = "Liste des identifiants d'une structure"),
+        st.Page("struct_clean.py", title = "Outil de référencement de structures dans HAL"),
     ],
     "Script partagés": [
         st.Page("script_gg.py", title = "Script Guillaume Godet"),
