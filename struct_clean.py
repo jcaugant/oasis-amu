@@ -10,10 +10,10 @@ def struct_clean(col):
     value = req['grouped']['valid_s']['groups'][0]['doclist']['docs'][i]['names_s']
     valid.append(value)
   for j in range(len(req['grouped']['valid_s']['groups'][1]['doclist']['docs'])):
-    value = req['grouped']['valid_s']['groups'][1]['doclist']['docs'][i]['names_s']
+    value = req['grouped']['valid_s']['groups'][1]['doclist']['docs'][j]['names_s']
     old.append(value)
   for k in range(len(req['grouped']['valid_s']['groups'][2]['doclist']['docs'])):
-    value = req['grouped']['valid_s']['groups'][2]['doclist']['docs'][i]['names_s']
+    value = req['grouped']['valid_s']['groups'][2]['doclist']['docs'][k]['names_s']
     unknown.append(value)
   st.write(valid, old, unknown)
 
