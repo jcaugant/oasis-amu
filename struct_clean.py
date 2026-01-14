@@ -15,6 +15,7 @@ def struct_clean(col):
   for k in range(0, len(req['grouped']['valid_s']['groups'][2]['doclist']['docs'])):
     val = req['grouped']['valid_s']['groups'][2]['doclist']['docs'][k]['name_s']
     unknown.append(val)
+  st.write(valid)
 
 portail = st.text_input("Entrez le numéro d'identifiant du portail ou de la collection à analyser", "")
 struct_clean(portail)
