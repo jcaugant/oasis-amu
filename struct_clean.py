@@ -15,7 +15,21 @@ def struct_clean(col):
   for k in range(0, len(req['grouped']['valid_s']['groups'][2]['doclist']['docs'])):
     val = req['grouped']['valid_s']['groups'][2]['doclist']['docs'][k]['name_s']
     unknown.append(val)
-  df_valid = pd.Dataframe(columns = ['Structure'])
+  df_valid = pd.DataFrame(
+   {
+       "Structures": valid,
+   }
+    )
+  df_old = pd.DataFrame(
+   {
+       "Structures": old,
+   }
+    )
+  df_unknown = pd.DataFrame(
+   {
+       "Structures": unknown,
+   }
+    )
 
   
 portail = st.text_input("Entrez le numéro d'identifiant du portail ou de la collection à analyser", "")
