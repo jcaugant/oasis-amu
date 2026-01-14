@@ -9,7 +9,12 @@ def struct_clean(col):
   for i in range(0, len(req['grouped']['valid_s']['groups'][0]['doclist']['docs'])):
     val = req['grouped']['valid_s']['groups'][0]['doclist']['docs'][i]['name_s']
     valid.append(val)
-  st.write(valid)
+  for j in range(0, len(req['grouped']['valid_s']['groups'][1]['doclist']['docs'])):
+    val = req['grouped']['valid_s']['groups'][1]['doclist']['docs'][i]['name_s']
+    old.append(val)
+  for k in range(0, len(req['grouped']['valid_s']['groups'][2]['doclist']['docs'])):
+    val = req['grouped']['valid_s']['groups'][2]['doclist']['docs'][i]['name_s']
+    unknown.append(val)
 
 portail = st.text_input("Entrez le numéro d'identifiant du portail ou de la collection à analyser", "")
 struct_clean(portail)
