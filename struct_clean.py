@@ -17,17 +17,17 @@ def struct_clean(col):
     unknown.append(val)
   df_valid = pd.DataFrame(
    {
-       "Structures": valid,
+       "Structures valides": valid,
    }
     )
   df_old = pd.DataFrame(
    {
-       "Structures": old,
+       "Structures anciennes": old,
    }
     )
   df_unknown = pd.DataFrame(
    {
-       "Structures": unknown,
+       "Structures inconnues": unknown,
    }
     )
   col1, col2, col3 = st.columns(3)
