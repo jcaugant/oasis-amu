@@ -32,11 +32,11 @@ def struct_clean(col):
     )
   col1, col2, col3 = st.columns(3)
   with col1:
-    st.dataframe(df_valid, width = 500)
+    st.dataframe(df_valid, width = 600)
   with col2:
-    st.dataframe(df_old, width = 500)
+    st.dataframe(df_old, width = 600)
   with col3:
-    st.dataframe(df_unknown, width = 500)
+    st.dataframe(df_unknown, width = 600)
   
 portail = st.text_input("Entrez le numéro d'identifiant du portail ou de la collection à analyser", "")
 struct_clean(portail)
