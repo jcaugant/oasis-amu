@@ -30,12 +30,12 @@ def struct_clean(col):
        "Structures": unknown,
    }
     )
-col1, col2, col3 = st.columns(3)
-with col1:
+  col1, col2, col3 = st.columns(3)
+  with col1:
     st.dataframe(df_valid, width = 100)
-with col2:
+  with col2:
     st.dataframe(df_old, width = 100)
-with col3:
+  with col3:
     st.dataframe(df_unknown, width = 100)
   
 portail = st.text_input("Entrez le numéro d'identifiant du portail ou de la collection à analyser", "")
