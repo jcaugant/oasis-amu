@@ -9,12 +9,18 @@ def struct_clean(col):
   for i in range(0, len(req['grouped']['valid_s']['groups'][0]['doclist']['docs'])):
     val = req['grouped']['valid_s']['groups'][0]['doclist']['docs'][i]['name_s']
     valid.append(val)
-  for j in range(0, len(req['grouped']['valid_s']['groups'][1]['doclist']['docs'])):
-    val = req['grouped']['valid_s']['groups'][1]['doclist']['docs'][j]['name_s']
-    old.append(val)
-  for k in range(0, len(req['grouped']['valid_s']['groups'][2]['doclist']['docs'])):
-    val = req['grouped']['valid_s']['groups'][2]['doclist']['docs'][k]['name_s']
-    unknown.append(val)
+  try :
+    for j in range(0, len(req['grouped']['valid_s']['groups'][1]['doclist']['docs'])):
+      val = req['grouped']['valid_s']['groups'][1]['doclist']['docs'][j]['name_s']
+      old.append(val)
+  except :
+    pass
+  try :
+    for k in range(0, len(req['grouped']['valid_s']['groups'][2]['doclist']['docs'])):
+      val = req['grouped']['valid_s']['groups'][2]['doclist']['docs'][k]['name_s']
+      unknown.append(val)
+  except :
+    pass
   df_valid = pd.DataFrame(
    {
        "Structures valides": valid,
