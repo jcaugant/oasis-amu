@@ -36,7 +36,7 @@ year_e = st.selectbox(
 'Sélectionnez une année de fin de recherche',
 (2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026))
 listing(struct,year_s, year_e)
-st.text("Outil développé par Théo Rousselle (INIST) et intégré par Julien Caugant (AMU)")
+st.text("Outil développé par Théo Rousselle (INIST-CNRS) et intégré par Julien Caugant (AMU)")
 
 
 
