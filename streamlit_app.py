@@ -2,7 +2,8 @@ import streamlit as st
 
 pages = {
     "Auteurs": [
-        st.Page("list_authors.py", title="Auteurs d'une structure par courriel"),
+        st.Page("list_authors_bymail.py", title="Auteurs d'une structure par courriel"),
+        st.Page("list_authors.py", title="Extraction des auteurs d'une structure"),
     ],
     "Bonus AMU": [
         st.Page("bonus_stats.py", title = "Pourcentage de dépôts dans HAL"),
