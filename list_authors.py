@@ -3,7 +3,7 @@ import pandas as pd
 import requests as rq
 from datetime import datetime
 
-def listing_auteurs(struct,year) :
+def listing(struct,year) :
   url = f"https://api.archives-ouvertes.fr/search/?q=*:*&rows=0&wt=json&facet=true&facet.query=structHasAuthIdHal_fs&facet.field=structHasAuthIdHal_fs&facet.prefix={struct}_FacetSep_&facet.mincount=1&facet.limit=8000&fq=publicationDateY_i:{year}"
   data = requests.get(url).json()
   facets = data["facet_counts"]["facet_fields"]["structHasAuthIdHal_fs"]
