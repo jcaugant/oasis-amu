@@ -26,6 +26,7 @@ def listing(struct,year) :
         "nb_documents": count
     })
   df = pd.DataFrame(rows)
+  st.dataframe(df, width = 1500) 
 
 struct = st.text_input("Entrez le numéro HAL de votre structure ", "")
 year = st.selectbox(
