@@ -26,7 +26,9 @@ def licence(col,year) :
             elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://creativecommons.org/licenses/by-nd/4.0/" :
                 req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "CC-BY-ND"
             elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf" :
-                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "Etalab"   
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "Etalab"
+            elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://creativecommons.org/publicdomain/zero/1.0/" :
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "CC0"
 
             licence.append(req['facet_counts']['facet_fields']['fileLicenses_s'][i])
         else :
