@@ -11,6 +11,23 @@ def licence(col,year) :
         if int(i) % 2 ==0 :
             if req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://creativecommons.org/licenses/by/4.0/" :
                 req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "CC-BY"
+            elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://about.hal.science/hal-authorisation-v1/" :
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "Autorisation HAL"
+            elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://creativecommons.org/licenses/by-nc-nd/4.0/" :
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "CC-BY-NC-ND"
+            elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://creativecommons.org/licenses/by-nc/4.0/" :
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "CC-BY-NC"
+            elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://hal.science/licences/copyright/" :
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "Copyright"
+            elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://creativecommons.org/licenses/by-nc-sa/4.0/" :
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "CC-BY-NC-SA"
+            elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://creativecommons.org/licenses/by-sa/4.0/" :
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "CC-BY-SA"
+            elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://creativecommons.org/licenses/by-nd/4.0/" :
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "CC-BY-ND"
+            elif req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf" :
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "Etalab"   
+
             licence.append(req['facet_counts']['facet_fields']['fileLicenses_s'][i])
         else :
             nb_licence.append(req['facet_counts']['facet_fields']['fileLicenses_s'][i])
