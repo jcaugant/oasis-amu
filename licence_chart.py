@@ -9,6 +9,8 @@ def licence(col,year) :
     limit = len(req['facet_counts']['facet_fields']['fileLicenses_s'])
     for i in range(0, limit) :
         if int(i) % 2 ==0 :
+            if req['facet_counts']['facet_fields']['fileLicenses_s'][i] == "https://creativecommons.org/licenses/by/4.0/" :
+                req['facet_counts']['facet_fields']['fileLicenses_s'][i] = "CC-BY"
             licence.append(req['facet_counts']['facet_fields']['fileLicenses_s'][i])
         else :
             nb_licence.append(req['facet_counts']['facet_fields']['fileLicenses_s'][i])
