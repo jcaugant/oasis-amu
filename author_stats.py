@@ -15,6 +15,31 @@ def stats_scrap(id) :
   df = pd.DataFrame(columns = columns)
   df['URI'], df['Date de publication'], df['Date de dépôt HAL'] = uri, publish_date, submit_date
   st.dataframe(df, width = 1500) 
+# Scrapping
+  for u in df['URI'] :
+    req = rq.get(u)
+    if req.status_code != 200:
+        consult.append("None")
+        download.append("None")
+    else :
+        pass
+    print(req)
+    soup = bs(req.content, 'html.parser')
+    metrics = soup.find_all("div", {"class": "metrics-views"})
+    for metric in metrics:
+        spans = metric.find_all("span")
+
+        valeur = spans[0].get_text(strip=True)
+        label = spans[1].get_text(strip=True)
+
+        if label == "Consultations":
+            consult.append(valeur)
+
+        elif label == "Téléchargements":
+            download.append(valeur)
+
+  df['Consultation'] = consult
+  df['Téléchargement'] = download
 
 
 idhal = st.text_input("Entrez l'IdHal de l'auteur", "")
