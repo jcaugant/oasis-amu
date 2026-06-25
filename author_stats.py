@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup as bs, 
+from bs4 import BeautifulSoup as bs
 import requests as rq
 import streamlit as st
 
