@@ -37,8 +37,8 @@ def stats_scrap(id) :
         elif label == "Téléchargements":
             download.append(valeur)
 
-  df['Consultation'] = consult
-  df['Téléchargement'] = download
+  df['Consultations'] = consult
+  df['Téléchargements'] = download
   st.dataframe(df, width = 1500) 
 
 
