@@ -11,11 +11,10 @@ def stats_scrap(id) :
     submit_date.append(req['response']['docs'][j]['submittedDate_s'])
     publish_date.append(req['response']['docs'][j]['publicationDate_s'])
     uri.append(req['response']['docs'][j]['uri_s'])
-
-columns = ["URI","Date de publication","Date de dépôt HAL","Consultations","Téléchargements"]
-df = pd.DataFrame(columns = columns)
-df['URI'], df['Date de publication'], df['Date de dépôt HAL'] = uri, publish_date, submit_date
-st.dataframe(df, width = 1500) 
+  columns = ["URI","Date de publication","Date de dépôt HAL","Consultations","Téléchargements"]
+  df = pd.DataFrame(columns = columns)
+  df['URI'], df['Date de publication'], df['Date de dépôt HAL'] = uri, publish_date, submit_date
+  st.dataframe(df, width = 1500) 
 
 
 idhal = st.text_input("Entrez l'IdHal de l'auteur", "")
