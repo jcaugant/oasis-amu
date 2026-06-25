@@ -40,6 +40,7 @@ def stats_scrap(id) :
 
   df['Consultation'] = consult
   df['Téléchargement'] = download
+  st.dataframe(df, width = 1500) 
 
 
 idhal = st.text_input("Entrez l'IdHal de l'auteur", "")
