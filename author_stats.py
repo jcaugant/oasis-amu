@@ -14,7 +14,6 @@ def stats_scrap(id) :
   columns = ["URI","Date de publication","Date de dépôt HAL","Consultations","Téléchargements"]
   df = pd.DataFrame(columns = columns)
   df['URI'], df['Date de publication'], df['Date de dépôt HAL'] = uri, publish_date, submit_date
-  st.dataframe(df, width = 1500) 
 # Scrapping
   for u in df['URI'] :
     req = rq.get(u)
