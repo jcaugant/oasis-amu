@@ -4,16 +4,17 @@ import streamlit as st
 import pandas as pd
 
 def stats_scrap(id) :
-  api = f"https://api.archives-ouvertes.fr/search/?q=*%3A*&rows=5000&wt=json&fq=authIdHal_s:{id}&fl=uri_s,publicationDate_s,submittedDate_s"
+  api = f"https://api.archives-ouvertes.fr/search/?q=*%3A*&rows=5000&wt=json&fq=authIdHal_s:{id}&fl=uri_s,publicationDate_s,submittedDate_s,label_s"
   req = rq.get(api).json()
-  uri, submit_date, publish_date, consult, download = [],[],[],[],[]
+  uri, submit_date, publish_date, consult, download, citation = [],[],[],[],[],[]
   for j in range(0,len(req['response']['docs'])):
     submit_date.append(req['response']['docs'][j]['submittedDate_s'])
     publish_date.append(req['response']['docs'][j]['publicationDate_s'])
     uri.append(req['response']['docs'][j]['uri_s'])
-  columns = ["URI","Date de publication","Date de dépôt HAL","Consultations","Téléchargements"]
+    citation.append(req['response']['docs'][j]['label_s'])
+  columns = ["URI","Date de publication","Date de dépôt HAL","Consultations","Téléchargements","Citation"]
   df = pd.DataFrame(columns = columns)
-  df['URI'], df['Date de publication'], df['Date de dépôt HAL'] = uri, publish_date, submit_date
+  df['URI'], df['Date de publication'], df['Date de dépôt HAL'], df['Citation'] = uri, publish_date, submit_date, citation
 # Scrapping
   for u in df['URI'] :
     req = rq.get(u)
